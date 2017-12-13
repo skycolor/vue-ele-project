@@ -1,6 +1,12 @@
 @import '../mixin';
 
+$fontColor: #bfcbd9;		//边侧栏字体颜色
+
 .aside{
 	width: 100px;
 	background: $lightB;
+}
+
+.el-menu{
+	background: red;
 }

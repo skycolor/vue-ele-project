@@ -1,0 +1,51 @@
+@import '../mixin';
+.container{
+	width: 100%;
+	height: 100%;
+	background: $b;
+	color: $w;
+	position: relative;
+
+	canvas {
+		top: 0;
+		left: 0;
+		@include setPos(100% , 100%)
+	}
+}
+
+.content{
+	width: 100%;
+	text-align: center;
+	background: $b;
+	z-index: 99;
+	position: absolute;
+	margin-top: -180px;
+	top: 50%;
+
+
+	.title{
+		font-size: 25px;
+		@include setTextMiddle(60px)
+		margin: 5px 0;
+	}
+
+	.login-form{
+		width: 30%;
+		margin: 8px auto;
+	}
+
+	.commit{
+		width: 100%;
+	}
+
+	.tip{
+		color: $w;
+		text-align: left;
+		font-size: 12px;
+		margin-bottom: 6px;
+		@include setTextMiddle(20px)
+	}
+}
+
+
+

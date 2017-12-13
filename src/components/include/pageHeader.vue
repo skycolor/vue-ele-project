@@ -1,6 +1,6 @@
 <template>
   <el-header class="head" >
-		<div class="title">孤月枫——后台管理系统</div>
+		<div class="title">后台管理系统</div>
 		<div class="logo" >
 			<el-dropdown trigger="click" >
 		      <span class="name">

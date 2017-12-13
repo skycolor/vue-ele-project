@@ -1,19 +1,25 @@
 <template>
-  <div>
+  <el-container id="app" >
+	<!--  头部   -->
+	<page-header />
+	<!-- 主体 -->
+	<el-container class="container-main">
+		<page-menu />
+		<router-view class="content-main" />
+	</el-container>
     
-  </div>
+  </el-container>
 </template>
 
 <script>
+import pageHeader from './include/pageHeader';
+import pageMenu from './include/pageMenu';
 export default {
-  data () {
-    return {
-      msg: ''
+  	components : {
+      	pageHeader , pageMenu
     }
-  } 
 }
 </script>
-
 
 <style lang="scss" scoped >
 	@import '../style/home/home';
