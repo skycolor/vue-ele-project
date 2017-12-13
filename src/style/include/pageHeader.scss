@@ -1,0 +1,38 @@
+@import '../mixin';
+
+.head{
+	width: 100%;
+	color: $w;
+	background: $darkB;
+	position: relative;
+	
+	.title{
+		display: inline-block;
+		letter-spacing: 1.8px;
+		@include setTextMiddle(60px);
+		margin-left: 20px;
+		font-size: 20px
+	}
+
+	.logo{
+		display: inline-block;
+		right: 40px;
+		top: 5px;
+		line-height: 50px;
+		text-align: right;
+		@include setPos(65px , 50px)
+		&:after{
+			content: ' ';
+			left: 0;
+			top: 5px;
+			@include setPos(40px , 40px)
+			@include bis('../../image/logo.jpg')
+			@include borderRadius(50%);
+		}
+
+		.name{
+			color:$w;
+			cursor: pointer;
+		}
+	}
+}

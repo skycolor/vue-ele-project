@@ -1,0 +1,50 @@
+$darkB: #242f42;        //顶部head颜色
+$lightB: #324157;       //左侧导航条
+$blue: #409EFF;  
+$w:#fff;
+
+// 背景图片地址和大小
+@mixin bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+// 圆角
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+// 圆角
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//文字居中
+@mixin setTextMiddle($height) {
+    height: $height;
+	line-height: $height;
+}
+
+//绝对定位
+@mixin setPos($w , $h) {
+    position: absolute;
+    width: $w;
+    height: $h;
+}
+
+
+
+
+
+
+
