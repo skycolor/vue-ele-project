@@ -4,7 +4,7 @@
 	<page-header />
 	<!-- 主体 -->
 	<el-container class="container-main">
-		<page-menu />
+		<page-menu class="menu" />
 		<router-view class="content-main" />
 	</el-container>
     

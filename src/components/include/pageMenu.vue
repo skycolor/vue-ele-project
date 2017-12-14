@@ -13,7 +13,7 @@
 		      </el-menu-item>
 		      <el-submenu  index="2" background-color="#000" >
 				<template class="test" slot="title">
-		          <i class="el-icon-menu"></i>
+		          <i class="el-icon-document"></i>
 		          <span slot="title">element</span>
 		        </template>
 	        	<el-menu-item index="/main/base">基本</el-menu-item>

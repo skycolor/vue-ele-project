@@ -14,23 +14,22 @@
 }
 
 .content{
-	width: 100%;
+	width: 45%;
 	text-align: center;
 	background: $b;
 	z-index: 99;
-	position: absolute;
-	margin-top: -180px;
-	top: 50%;
+	@include setPosCenter
+	@include borderRadius(5px)
 
 
 	.title{
-		font-size: 25px;
+		font-size: 30px;
 		@include setTextMiddle(60px)
 		margin: 5px 0;
 	}
 
 	.login-form{
-		width: 30%;
+		width: 70%;
 		margin: 8px auto;
 	}
 
@@ -39,7 +38,6 @@
 	}
 
 	.tip{
-		color: $w;
 		text-align: left;
 		font-size: 12px;
 		margin-bottom: 6px;

@@ -1,13 +1,16 @@
 <template>
   <el-header class="head" >
-		<div class="title">后台管理系统</div>
+		<div class="title">
+			<span class="el-icon-menu" ></span>
+			后台管理系统
+		</div>
 		<div class="logo" >
-			<el-dropdown trigger="click" >
+			<el-dropdown trigger="click" @command="handleCommand" >
 		      <span class="name">
 		        hf
 		      </span>
 		      <el-dropdown-menu slot="dropdown">
-		        <el-dropdown-item>退出</el-dropdown-item>
+		        <el-dropdown-item command="quit" >退出</el-dropdown-item>
 		      </el-dropdown-menu>
 		    </el-dropdown>
 		</div>
@@ -16,7 +19,13 @@
 
 <script>
 	export default {
-	  
+	  	 methods: {
+	       handleCommand(command) {
+	          if(command == 'quit'){
+				this.$router.push('/');
+	          }
+	       }
+	    }
 	}
 </script>
 
