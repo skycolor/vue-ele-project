@@ -1,7 +1,7 @@
 <template>
   <el-header class="head" >
 		<div class="title">
-			<span class="el-icon-menu" ></span>
+			<span class="el-icon-menu" @click="handleMenuFoldClick" ></span>
 			后台管理系统
 		</div>
 		<div class="logo" >
@@ -18,9 +18,13 @@
 </template>
 
 <script>
+	import {mapMutations} from 'vuex'
 	export default {
 	  	 methods: {
-	       handleCommand(command) {
+	  	   ...mapMutations([
+                'handleMenuFoldClick'
+           ]),
+	       handleCommand(command) {			//处理头像处下拉框的点击事件
 	          if(command == 'quit'){
 				this.$router.push('/');
 	          }
