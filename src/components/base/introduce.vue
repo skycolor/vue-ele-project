@@ -55,7 +55,10 @@
 			    	前端菜鸟一枚，喜欢到处玩玩闹闹
 			    </div>
 			    <div>
-			    	个人git地址为：https://skycolor.github.io/
+			    	个人git地址为：
+			    	<a class="link" href="https://skycolor.github.io" target="_blank" >
+			    		https://skycolor.github.io/
+			    	</a>
 			    </div>
 			    <div>
 			    	欢迎关注

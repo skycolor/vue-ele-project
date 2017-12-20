@@ -30,7 +30,13 @@
 		.content-detail{
 			margin-top: 25px;
 
+			.link{
+				text-decoration : underline;
 
+				&:hover{
+					color : $blue;
+				}
+			}
 		}
 
 
