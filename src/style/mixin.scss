@@ -20,16 +20,6 @@ $b: #000;
     border-radius: $radius;
 }
 
-
-// 圆角
-@mixin borderRadius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
-    border-radius: $radius;
-}
-
 //文字居中
 @mixin setTextMiddle($height) {
     height: $height;
