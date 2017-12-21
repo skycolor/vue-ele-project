@@ -1,4 +1,4 @@
-<template>
+<div></div><template>
   <div class="container">
   	<!-- 轮播图 -->
     <div class="banner" >

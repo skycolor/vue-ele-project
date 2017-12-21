@@ -11,7 +11,7 @@
 	        <i class="el-icon-edit-outline"></i>
 	        <span slot="title">简介</span>
 	      </el-menu-item>
-	      <el-submenu  index="2" background-color="#000" >
+	      <el-submenu  index="2">
 			<template class="test" slot="title">
 	          <i class="el-icon-document"></i>
 	          <span slot="title">element</span>
@@ -47,7 +47,7 @@
        },
 	   computed : {
 	   		...mapGetters({
-		      isFolding: 'getMenuFolding'
+		      isFolding : 'getMenuFolding'
 		    })
 	   }
 	}
