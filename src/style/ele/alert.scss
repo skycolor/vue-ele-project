@@ -1,0 +1,33 @@
+@import '../mixin';
+
+.container{
+	padding: 20px 30px;
+
+	.alert-info{
+		margin-bottom: 25px;
+		border-bottom: solid 1px #eee;
+		padding: 0 0 10px;
+
+		& > div{
+			margin-bottom: 15px;
+		}
+	}
+
+	.message-info{
+		margin-bottom: 25px;
+		border-bottom: solid 1px #eee;
+		padding: 0 0 25px;
+	}
+
+	.messageBox-info{
+		margin-bottom: 25px;
+		border-bottom: solid 1px #eee;
+		padding: 0 0 25px;
+	}
+	
+	.notifie-info{
+		margin-bottom: 25px;
+		border-bottom: solid 1px #eee;
+		padding: 0 0 25px;
+	}
+}
