@@ -3,6 +3,27 @@
 .container{
 	padding: 20px 30px;
 
+	.tit{
+		margin-bottom: 15px;
+		@include setTextMiddle(40px)
 
+		a{
+			display: inline-block;
+			color: $blue;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		.commitBtn{
+			float: right;
+			margin-top: 4px;
+		}
+	}
+
+	.content{
+		height: 400px;
+	}
 	
 }
