@@ -1,0 +1,54 @@
+@import '../mixin';
+
+.container{
+	padding: 20px 30px;
+	
+	.tit{
+		margin-bottom: 20px;
+	}
+
+	.layout{
+		text-align: center;
+
+		.floor{
+			margin: 25px 0;
+			padding-bottom: 30px;
+			border-bottom: solid 1px #eee;
+
+			p{margin-bottom: 20px;}
+		}
+
+		.demo1{
+			.avatar-uploader {
+			    border: 1px dashed #d9d9d9;
+			    border-radius: 6px;
+			    cursor: pointer;
+			    position: relative;
+			    overflow: hidden;
+			    width: 178px;
+		    	height: 178px;
+		    	display: inline-block;
+			}
+		  	.avatar-uploader:hover {
+		    	border-color: #409EFF;
+		  	}
+		  	.avatar-uploader-icon {
+			    font-size: 28px;
+			    color: #8c939d;
+			    width: 178px;
+			    height: 178px;
+			    line-height: 178px;
+			    text-align: center;
+		  	}
+		  	.avatar {
+			    width: 178px;
+			    height: 178px;
+			    display: block;
+		  	}
+		}
+
+	}
+
+
+
+}
