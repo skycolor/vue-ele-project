@@ -2,16 +2,19 @@
 
 $fontColor: #bfcbd9;		//边侧栏字体颜色
 
-.el-menu{
+.menu{
 	border-right : none;
 	height: 100%;
 	width: 280px;
-	overflow-y: auto;
+	overflow: auto;
 
 	&::-webkit-scrollbar {
 	    display: none;
 	}
-	
+
+	&.collapse{
+		overflow: visible;
+	}
 }
 
 

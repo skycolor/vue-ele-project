@@ -5,6 +5,7 @@
 	      background-color="#324157"
 	      text-color="#bfcbd9"
 	      active-text-color="#20a0ff"
+	      :class="{ collapse: isFolding }"
 	      :router=true
 	      :collapse=isFolding >
 	      <el-menu-item index="/main">

@@ -5,9 +5,7 @@
 	<!-- 主体 -->
 	<el-container class="container-main">
 		<page-menu class="menu" />
-		<transition mode="out-in" >
-			<router-view class="content-main" />
-		</transition>
+		<main-router class="content-main" />
 	</el-container>
     
   </el-container>
@@ -16,9 +14,11 @@
 <script>
 import pageHeader from './include/pageHeader';
 import pageMenu from './include/pageMenu';
+import mainRouter from './include/mainRouter';
+
 export default {
 	components : {
-      	pageHeader , pageMenu
+      	pageHeader , pageMenu , mainRouter
     }
 }
 </script>
