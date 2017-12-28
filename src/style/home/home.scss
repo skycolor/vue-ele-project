@@ -11,3 +11,24 @@
     	overflow: auto;
     }
 }
+
+
+// vue-router 过渡动画，这里用渐隐渐显的方式
+.v-enter{
+    opacity: 0;
+}
+.v-enter-active{
+    transition: 0.15s;
+}
+.v-enter-to{
+    opacity: 1;
+}
+.v-leave{
+    opacity: 1;
+}
+.v-leave-to{
+    opacity:0;
+}
+.v-leave-active{
+    transition: 0.15s;
+}
