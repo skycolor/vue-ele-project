@@ -1,5 +1,6 @@
 <template>
   <div class="container" >
+    <bread-nav  :list="breadList" iconClass="el-icon-document" />
   	<div class="btns">
   		<el-button type="danger" icon="el-icon-delete" @click="handleChooseDel" >
   			批量删除
@@ -78,6 +79,8 @@
 <script>
 import tableData from '../../data/tableData';
 
+import breadNav from '../include/breadNav';
+
 const tableList = tableData.list;
 const pageSize = 5;
 
@@ -91,11 +94,15 @@ export default {
   	 	pageSize : pageSize ,
   	 	pageTotal : tableData.list.length ,
   	 	selectVal: '' ,
-  	 	curPage : 1
+  	 	curPage : 1 ,
+      breadList : ['element' , '表格' ]
   	};
   } ,
   mounted(){
   	this.showData = tableList.slice(0 , pageSize);
+  } ,
+  components : {
+      breadNav
   } ,
   methods: {
   	handleDelete(index , row){			//处理table单行删除

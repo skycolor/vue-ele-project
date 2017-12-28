@@ -1,5 +1,6 @@
 <template>
   <div class="container" >
+  		<bread-nav  :list="breadList" iconClass="el-icon-document" />
 		<el-form ref="form" :model="form" label-width="80px">
 		  <el-form-item label="活动名称">
 		    <el-input v-model="form.name"></el-input>
@@ -48,6 +49,8 @@
 </template>
 
 <script>
+import breadNav from '../include/breadNav';
+
 export default {
   data() {
       return {
@@ -61,7 +64,8 @@ export default {
           resource: '',
           desc: '' 
         } ,
-        sliderVal : 48
+        sliderVal : 48 ,
+        breadList : ['element' , '表单' ]
       }
     },
     methods: {
@@ -75,7 +79,11 @@ export default {
             return val / 100;
       }
 	  
-    }
+    } ,
+    components : {
+      breadNav
+ 	} 
+
 }
 </script>
 

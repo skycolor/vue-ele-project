@@ -1,6 +1,6 @@
 <template>
   <div class="container" >
-      <p class="el-icon-setting title" >简介</p>
+  	  <p class="el-icon-setting title" >简介</p>
       <div class="content" >
       	  <p class="projcet-name">vue-ele-project</p>
       	  <el-collapse class="content-detail" v-model="activeName"  accordion>
@@ -70,12 +70,13 @@
 </template>
 
 <script>
+
 export default {
   	data() {
       return {
-        activeName: '1'
+        activeName: '1' 
       };
-    }
+    } 
 }
 </script>
 

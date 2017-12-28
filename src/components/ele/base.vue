@@ -1,5 +1,6 @@
 <div></div><template>
   <div class="container">
+  	<bread-nav  :list="breadList" iconClass="el-icon-document" />
   	<!-- 轮播图 -->
     <div class="banner" >
      	<el-carousel trigger="click" :interval="6000" type="card" >
@@ -104,8 +105,17 @@
 </template>
 
 <script>
+import breadNav from '../include/breadNav';
+
 export default {
-  
+  data() {
+      return {
+        breadList : ['element' , '基本' ]
+      };
+  } ,
+  components : {
+      breadNav
+  } 
 }
 </script>
 

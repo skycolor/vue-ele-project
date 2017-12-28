@@ -1,5 +1,6 @@
 <template>
   <div class="container" >
+  	  <bread-nav  :list="breadList" iconClass="el-icon-goods" />
       <p class="tit">
       	 element-ui支持很多种类的文件上传案例，功能十分的强大！！！
       </p>
@@ -76,6 +77,8 @@
 </template>
 
 <script>
+import breadNav from '../include/breadNav';
+
 export default {
 	data() {
 	  return {
@@ -91,9 +94,13 @@ export default {
           name: 'food2.jpeg',
           url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
           status: 'finished'
-        }]
+        }] ,
+        breadList : ['工具' , '上传' ]
 	  };
 	},
+	components: {
+      breadNav
+	} ,
 	methods: {
 	  handleAvatarSuccess1(res, file) {
 	    this.imageUrl = URL.createObjectURL(file.raw);

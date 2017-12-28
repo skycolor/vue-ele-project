@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <bread-nav  :list="breadList" iconClass="el-icon-document" />
   	<div class="alert-info">
   		<el-alert show-icon
 		    title="成功提示的文案"
@@ -41,7 +42,17 @@
 </template>
 
 <script>
+import breadNav from '../include/breadNav';
+
 export default {
+    data() {
+      return {
+        breadList : ['element' , '弹窗' ]
+      };
+    } ,
+    components : {
+        breadNav
+    } ,
   	methods : {
   	  notifie1() {
         this.$notify.success({
