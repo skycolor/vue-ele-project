@@ -3,7 +3,6 @@
 .head{
 	width: 100%;
 	color: $w;
-	background: $darkB;
 	position: relative;
 	
 	.title{
@@ -21,7 +20,7 @@
 
 	.logo{
 		display: inline-block;
-		right: 40px;
+		right: 130px;
 		top: 5px;
 		line-height: 50px;
 		text-align: right;
@@ -34,6 +33,21 @@
 			@include bis('../../image/logo.jpg')
 			@include borderRadius(50%);
 		}
+
+		.name{
+			color:$w;
+			cursor: pointer;
+		}
+	}
+
+	.theme{
+		display: inline-block;
+		right: 40px;
+		top: 5px;
+		line-height: 50px;
+		text-align: right;
+		@include setPos(65px , 50px)
+		
 
 		.name{
 			color:$w;

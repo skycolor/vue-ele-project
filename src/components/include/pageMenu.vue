@@ -2,9 +2,9 @@
   <el-menu
 	      default-active="/main"
 		  class="el-menu-vertical-demo menu"
-	      background-color="#324157"
-	      text-color="#bfcbd9"
-	      active-text-color="#20a0ff"
+	      :background-color="themeObj.menuBg"
+	      :text-color="themeObj.menuTextColor"
+	      :active-text-color="themeObj.menuActiveTextColor"
 	      :class="{ collapse: isFolding }"
 	      :router=true
 	      :collapse=isFolding >
@@ -48,7 +48,7 @@
        },
 	   computed : {
 	   		...mapGetters({
-		      isFolding : 'getMenuFolding'
+		      isFolding : 'getMenuFolding' , themeObj : 'getThemeObj'
 		    })
 	   }
 	}
