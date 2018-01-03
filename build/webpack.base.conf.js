@@ -55,8 +55,7 @@ module.exports = {
         loader: 'url-loader?limit=8192&name=../images/[name].[ext]?[hash]',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]') ,
-          publicPath : '/'
+          name: utils.assetsPath('img/[name].[hash:7].[ext]') 
         }
       },
       {
