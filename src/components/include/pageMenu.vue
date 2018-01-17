@@ -2,12 +2,12 @@
   <el-menu
 	      default-active="/main"
 		  class="el-menu-vertical-demo menu"
-	      :background-color="themeObj.menuBg"
-	      :text-color="themeObj.menuTextColor"
-	      :active-text-color="themeObj.menuActiveTextColor"
-	      :class="{ collapse: isFolding }"
+	      :background-color="getThemeObj.menuBg"
+	      :text-color="getThemeObj.menuTextColor"
+	      :active-text-color="getThemeObj.menuActiveTextColor"
+	      :class="{ collapse: getMenuFolding }"
 	      :router=true
-	      :collapse=isFolding >
+	      :collapse=getMenuFolding >
 	      <el-menu-item index="/main">
 	        <i class="el-icon-edit-outline"></i>
 	        <span slot="title">简介</span>
@@ -47,9 +47,9 @@
             }
        },
 	   computed : {
-	   		...mapGetters({
-		      isFolding : 'getMenuFolding' , themeObj : 'getThemeObj'
-		    })
+	   		...mapGetters([
+		      'getMenuFolding' , 'getThemeObj'
+		    ])
 	   }
 	}
 </script>

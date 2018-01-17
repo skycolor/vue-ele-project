@@ -1,5 +1,5 @@
 <template>
-  <el-header class="head" :style="{ background: themeObj.headBg}" >
+  <el-header class="head" :style="{ background: getThemeObj.headBg}" >
 		<div class="title">
 			<span class="el-icon-menu" @click="handleMenuFoldClick" ></span>
 			后台管理系统
@@ -50,9 +50,9 @@
 	       } ,
 	    } ,
 	    computed : {
-	   		...mapGetters({
-		      themeObj : 'getThemeObj'
-		    })
+	   		...mapGetters([
+		      'getThemeObj'
+		    ])
 	   }
 	}
 </script>
