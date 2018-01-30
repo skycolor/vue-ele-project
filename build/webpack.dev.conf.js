@@ -9,6 +9,14 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
+//搭建本地express服务
+const express = require('express');
+const app = express();
+let appData = require('../users.json');
+let apiRoutes = express.Router();
+app.use('/api', apiRoutes)
+
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -36,6 +44,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    } ,
+    //本地接口
+    before(app){
+      app.get('/api/getUser' , (req , res) => {
+        res.json(appData)
+      })
     }
   },
   plugins: [

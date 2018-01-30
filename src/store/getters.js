@@ -4,5 +4,8 @@ export default {
     } ,
     getThemeObj(state){				//当前主题对象
         return state.themeObj;
+    } ,
+    getUsers(state){				//当前主题对象
+        return state.users;
     } 
 }

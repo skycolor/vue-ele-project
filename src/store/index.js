@@ -14,7 +14,8 @@ const state = {
 		menuTextColor : '#bfcbd9' ,
 		menuActiveTextColor : '#20a0ff' ,
 		headBg : '#242f42'
-	}
+	} ,
+	users : []
 }
 
 

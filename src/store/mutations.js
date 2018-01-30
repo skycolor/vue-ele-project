@@ -4,5 +4,8 @@ export default {
 	} ,
 	changeTheme(state , newThemeObj){		//更换主题
 		state.themeObj = newThemeObj;
+	} ,
+	inputUsers(state , users){		//更换主题
+		state.users = users;
 	}
 }

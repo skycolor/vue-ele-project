@@ -32,7 +32,7 @@
   		<el-table
   			class="mainTable"
   			ref="mainTable"
-  			:data="showData"
+  			:data="users"
 		    :default-sort = "{prop: 'name', order: 'descending'}"
 		    @selection-change="chooseCheckBox"
 		    stripe border>
@@ -70,20 +70,17 @@
 		  layout="prev, pager, next"
 		  @current-change="handlePage"
 		  :page-size="pageSize"
-		  :total="pageTotal">
+		  :total="users.length">
 		</el-pagination>
   	</div>
   </div>
 </template>
 
 <script>
-import tableData from '../../data/tableData';
-
+import {mapState , mapActions , mapMutations} from 'vuex'
 import breadNav from '../include/breadNav';
 
-const tableList = tableData.list;
 const pageSize = 5;
-
 const selectDict = {"0" : "全部" , "1" : "海外" , "2" : "广东"};
 
 export default {
@@ -92,19 +89,32 @@ export default {
   	 	showData : [] ,
   	 	chooseData : [] ,
   	 	pageSize : pageSize ,
-  	 	pageTotal : tableData.list.length ,
   	 	selectVal: '' ,
   	 	curPage : 1 ,
       breadList : ['element' , '表格' ]
   	};
   } ,
   mounted(){
-  	this.showData = tableList.slice(0 , pageSize);
+    this.handleUsers();
   } ,
   components : {
       breadNav
   } ,
+  computed : {
+      ...mapState([
+        'users'
+      ]) 
+  } ,
   methods: {
+    ...mapActions([
+        'getUsers'
+    ]),
+    handleUsers(){        //处理用户数据
+      if(this.users.length != 0) return;
+      this.getUsers();
+      console.log(this.users.length)
+
+    } ,
   	handleDelete(index , row){			//处理table单行删除
   		this.$confirm('是否删除该行?', '提示', {
   		  confirmButtonText: '确定',
