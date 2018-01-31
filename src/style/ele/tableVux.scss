@@ -1,0 +1,20 @@
+@import '../mixin';
+
+.container{
+	padding: 20px 30px;
+
+	.btns{
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	.mainTable{
+		margin-top: 30px;
+	}
+
+	.page-control{
+		margin: 30px 0 10px;
+		text-align: center;
+	}
+}
+

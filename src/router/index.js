@@ -16,6 +16,7 @@ import alert from '../components/ele/alert'
 import base from '../components/ele/base'
 import form from '../components/ele/form'
 import table from '../components/ele/table'
+import tableVux from '../components/ele/tableVux'
 //工具
 import editor from '../components/tool/editor'
 import upload from '../components/tool/upload'
@@ -51,6 +52,10 @@ export default new Router({
 		path: 'table',
 	    name: 'table',
 	    component: table 
+      },{
+		path: 'tableVux',
+	    name: 'tableVux',
+	    component: tableVux 
       },{
 		path: 'editor',
 	    name: 'editor',

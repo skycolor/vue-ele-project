@@ -19,6 +19,7 @@
 	        </template>
         	<el-menu-item index="/main/base">基本</el-menu-item>
         	<el-menu-item index="/main/table">表格</el-menu-item>
+        	<el-menu-item index="/main/tableVux">表格Vux</el-menu-item>
         	<el-menu-item index="/main/form">表单</el-menu-item>
         	<el-menu-item index="/main/alert">弹窗</el-menu-item>
 	      </el-submenu>
